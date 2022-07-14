@@ -13,8 +13,8 @@ resource "authlete_service" "as" {
 }
 
 resource "authlete_client" "portal" {
-   apikey = authlete_service.as.id
-   apisecret = authlete_service.as.api_secret
+   service_api_key = authlete_service.as.id
+   service_api_secret = authlete_service.as.api_secret
    developer = "mydomain"
    client_id_alias = "portal_client"
    client_id_alias_enabled = false
